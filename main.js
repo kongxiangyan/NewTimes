@@ -1,3 +1,3 @@
 window.onload = function () {
-    document.write("是的很简单吧。");
+    // document.body.innerHTML = "这是第一个页面。"
 };
