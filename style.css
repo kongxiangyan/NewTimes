@@ -1,16 +1,16 @@
 * {
-    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
 }
-.class1 {
-    position: relative;
-    display: block;
-    height: 100px;
-    width: 100px;
-    background-color: #419d78;
+
+.content-wrapper {
+    display: flex;
 }
-.class2 {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 50px;
+
+.content-unit {
+
+}
+
+.paragraph {
+    
 }
