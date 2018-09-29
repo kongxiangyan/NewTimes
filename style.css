@@ -1,16 +1,16 @@
 * {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 .class1 {
-    position: relative;
-    display: block;
-    height: 100px;
-    width: 100px;
-    background-color: #419d78;
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: #419d78;
 }
 .class2 {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 50px;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
