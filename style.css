@@ -1,16 +1,98 @@
 * {
-  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
 }
-.class1 {
+body {
+  width: 100%;
+  background-image: url(./assets/bg.jpg);
+  background-repeat: repeat;
+  font-family: arial, "Microsoft YaHei", 微软雅黑;
+}
+
+.content-wrapper {
   position: relative;
-  display: block;
-  height: 100px;
-  width: 100px;
-  background-color: #419d78;
+  width: 100%;
+  display: flex;
+  /* 项目的排列方向和换行 */
+  flex-flow: row wrap;
+  /* 项目在主轴对齐 */
+  justify-content: center;
+  /* 项目在交叉轴的对齐方式 */
+  align-content: flex-start;
+  height: auto;
 }
-.class2 {
-  display: block;
+.content-unit {
+  position: relative;
+  box-sizing: content-box;
+
+  flex: 0 0 100%;
+  /* 定义二级felx容器 */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.content-unit .title {
+  
+}
+
+/* 封面部分 */
+.content-unit .media,
+.content-unit .mask {
+    min-width: 100%;
+}
+
+.content-unit .media video,
+.content-unit .media img {
+  /* 图片、视频成比例自适应 */
+  width: 100%;
+}
+.content-unit .media {
+  position: relative;
+
+}
+.content-unit .mask {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+}
+.content-unit .mask .intro{
+/* position: absolute;
+  top: 10px;
+  left: 10px; */
+  font-size: 50px;
+  color: #fff;
+}
+
+/* 行业报告、图表呈现部分 */
+.part2-graph {
+}
+
+.paragraph {
+  box-sizing: content-box;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #3e3a39;
+}
+
+@media only screen and (min-width: 500px) {
+  .paragraph {
+    width: 80%;
+    padding: 10px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .paragraph {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .part2-graph {
+      padding: 10px 20px;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+  }
 }
