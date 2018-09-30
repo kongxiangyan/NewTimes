@@ -58,6 +58,14 @@ body {
 
 /* 行业报告、图表呈现部分 */
 .part2-graph {
+    text-align: center;
+    font-weight: bold;
+}
+#mix-line-bar {
+    min-height: 300px;
+}
+#part2-graph-geo {
+    /* min-height: 300px; */
 }
 
 /* 安全问题 */
@@ -110,10 +118,13 @@ body {
   box-sizing: content-box;
   position: relative;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: justify;
   color: #3e3a39;
   text-indent: 2em;
+}
+.paragraph p {
+    margin: 10px 0;
 }
 .unit-header-2 {
   box-sizing: content-box;
@@ -130,6 +141,15 @@ body {
   font-size: 14px;
   color: #666;
 }
+.blockquote {
+    box-sizing: content-box;
+    position: relative;
+    padding: 5px 0 5px 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #38719D;
+    border-left: 4px solid #38719D;
+}
 
 @media only screen and (min-width: 500px) {
   .paragraph {
@@ -137,6 +157,14 @@ body {
     margin: 10px 0;
   }
   .component-intro {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .blockquote {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .part2-graph {
     width: 80%;
     margin: 10px 0;
   }
@@ -158,11 +186,13 @@ body {
     margin: 10px 20px;
     width: 100%;
   }
-  .part2-graph {
+  .blockquote {
     margin: 10px 20px;
     width: 100%;
-    text-align: center;
-    font-weight: bold;
+  }
+  .part2-graph {
+    margin: 10px 20px;
+    width: 80%;
   }
   .image-center {
     margin: 10px 20px;
