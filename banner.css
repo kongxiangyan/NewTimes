@@ -1,0 +1,60 @@
+#banner-wrapper {
+  position: relative;
+}
+#banner-wrapper .banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 2s;
+}
+#banner-wrapper .banner-img img {
+    width: 100%;
+}
+#banner-wrapper .tab {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#banner-wrapper .tab span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 3px;
+  background: rgba(105, 105, 105, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #887b6e;
+}
+#banner-wrapper .tab span.on {
+  background: #e2ceb7;
+}
+#banner-wrapper .tab span:hover {
+  background: #e2ceb7;
+}
+#banner-wrapper .prev {
+  position: absolute;
+  left: 20px;
+  /* top: 50%; */
+  margin-top: -50%;
+  width: 41px;
+  height: 69px;
+  background: url("assets/icon-slides.png") 82px;
+  cursor: pointer;
+}
+#banner-wrapper .prev:hover {
+  background: url("assets/icon-slides.png");
+}
+#banner-wrapper .next {
+  position: absolute;
+  right: 20px;
+  /* top: 210px; */
+  margin-top: -50%;
+  width: 41px;
+  height: 69px;
+  background: url("assets/icon-slides.png") 41px;
+  cursor: pointer;
+}
+#banner-wrapper .next:hover {
+  background: url("assets/icon-slides.png") 123px;
+}

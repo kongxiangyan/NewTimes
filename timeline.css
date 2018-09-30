@@ -1,0 +1,25 @@
+.timeline {
+
+}
+.timeline ul {
+    list-style: none;
+    background: url(./assets/version_line.png) repeat-y scroll 10px 0 transparent;
+}
+.timeline ul li {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 0;
+}
+.timeline ul li .time {
+    font-weight: bold;
+}
+.timeline ul li .content {
+    box-sizing: content-box;
+    padding: 0 15px;
+}
+.timeline ul li .content .title {
+    color: #004a83;
+}
+.timeline ul li .content .intro {
+    line-height: 1.8;
+}
