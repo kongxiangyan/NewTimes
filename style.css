@@ -6,7 +6,7 @@ body {
   width: 100%;
   background-image: url(./assets/bg.jpg);
   background-repeat: repeat;
-  font-family: arial, "Microsoft YaHei", 微软雅黑;
+  font-family: 黑体, arial, "Microsoft YaHei", 微软雅黑;
 }
 
 .content-wrapper {
@@ -30,15 +30,14 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-.content-unit .title {
-  
+
+  text-align: justify;
 }
 
 /* 封面部分 */
 .content-unit .media,
 .content-unit .mask {
-    min-width: 100%;
+  min-width: 100%;
 }
 
 .content-unit .media video,
@@ -48,25 +47,63 @@ body {
 }
 .content-unit .media {
   position: relative;
-
 }
 .content-unit .mask {
   position: absolute;
-  /* top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; */
 }
-.content-unit .mask .intro{
-/* position: absolute;
-  top: 10px;
-  left: 10px; */
-  font-size: 50px;
+.content-unit .mask .intro {
+  font-size: 32px;
   color: #fff;
 }
 
 /* 行业报告、图表呈现部分 */
 .part2-graph {
+}
+
+/* 安全问题 */
+.image-center {
+  position: relative;
+}
+.image-center img {
+  width: 100%;
+}
+
+/* 对比列表样式 */
+.contrast-list {
+  position: relative;
+}
+.contrast-list ul {
+  overflow-x: scroll;
+  list-style: none;
+
+  display: flex;
+  flex-flow: row nowrap;
+  
+  width: 100%;
+  box-sizing: content-box;
+  border: 2px solid #38719d;
+  border-radius: 10px;
+
+  /* 隐藏IE10+滚动条 */
+  -ms-overflow-style: none;
+}
+/* 隐藏Chrome和Safari滚动条 */
+.contrast-list ul::-webkit-scrollbar {
+  display: none;
+}
+.contrast-list ul li { 
+  flex: 0 0 95%;
+  padding: 0 2.5%;
+}
+.contrast-list ul li div {
+  box-sizing: content-box;
+  margin: 10px 0;
+}
+.contrast-list ul li div:nth-child(1) {
+  color: #38719d;
+}
+.contrast-list ul li div:nth-child(2) {
+  color: #F47c4c;
 }
 
 .paragraph {
@@ -76,23 +113,63 @@ body {
   line-height: 1.5;
   text-align: justify;
   color: #3e3a39;
+  text-indent: 2em;
+}
+.unit-header-2 {
+  box-sizing: content-box;
+  position: relative;
+  color: #38719d;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  font-size: 24px;
+}
+.component-intro {
+  box-sizing: content-box;
+  position: relative;
+  font-size: 14px;
+  color: #666;
 }
 
 @media only screen and (min-width: 500px) {
   .paragraph {
     width: 80%;
-    padding: 10px 0;
+    margin: 10px 0;
+  }
+  .component-intro {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .image-center {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .contrast-list {
+    width: 80%;
+    margin: 10px 0;
   }
 }
 @media only screen and (max-width: 500px) {
   .paragraph {
-    padding: 10px 20px;
+    margin: 10px 20px;
+    width: 100%;
+  }
+  .component-intro {
+    margin: 10px 20px;
     width: 100%;
   }
   .part2-graph {
-      padding: 10px 20px;
-      width: 100%;
-      text-align: center;
-      font-weight: bold;
+    margin: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .image-center {
+    margin: 10px 20px;
+    width: 100%;
+  }
+  .contrast-list {
+    margin: 10px 20px;
+    width: 100%;
   }
 }
