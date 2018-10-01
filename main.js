@@ -13,8 +13,11 @@ for( ; len -- > 0; ) {
   }
 }
 
-var boo1 = false;
+var boo1 = true;
+var boo2 = true;
+
 btns[0].onclick = function () {
+  if ( boo2 === false & !boo1 === false) return;
   var len = list1.length;
   for ( ; len -- > 0; ) {
     list1[len].style.display = boo1 ? "none" : "";
@@ -23,8 +26,8 @@ btns[0].onclick = function () {
   boo1 = !boo1;
 }
 
-var boo2 = false;
 btns[1].onclick = function () {
+  if ( boo1 === false & !boo2 === false) return;
   var len = list1.length;
   for ( ; len -- > 0; ) {
     list2[len].style.display = boo2 ? "none" : "";
@@ -32,3 +35,24 @@ btns[1].onclick = function () {
   this.className = boo2 ? "block dark" : "block";
   boo2 = !boo2;
 }
+
+var req = new XMLHttpRequest();
+
+
+req.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+     console.info("访问已记录")
+     console.info(req.response);
+  }
+};
+req.onerror = function () {
+  console.info("哎呀，这条没有记录下来");
+};
+req.open('GET', 'https://www.oponp.com/hello', false);
+// 指定允许其他域名访问
+// req.setRequestHeader('Access-Control-Allow-Origin','*');
+// 响应类型
+// req.setRequestHeader('Access-Control-Allow-Methods','GET');
+// 响应头设置
+// req.setRequestHeader('Access-Control-Allow-Headers','x-requested-with,content-type');
+req.send(null);
